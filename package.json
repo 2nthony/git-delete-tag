@@ -7,13 +7,29 @@
     "type": "git",
     "url": "evillt/git-delete-tag"
   },
+  "bin": {
+    "git-dt": "bin/cli.js",
+    "git-delete-tag": "bin/cli.js"
+  },
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "bin",
+    "lib",
+    "utils"
+  ],
   "scripts": {
     "lint": "xo",
     "test": "npm run lint && ava --verbose"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cac": "^6.5.2",
+    "cross-spawn": "^6.0.5",
+    "kleur": "^3.0.3",
+    "mri": "^1.1.4",
+    "multimatch": "^4.0.0",
+    "ora": "^3.4.0"
+  },
   "devDependencies": {
     "ava": "^2.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -28,7 +44,11 @@
     "extends": [
       "rem",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+      "unicorn/filename-case": false,
+      "no-multi-assign": 0
+    }
   },
   "husky": {
     "hooks": {

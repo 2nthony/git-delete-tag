@@ -10,6 +10,71 @@ Please consider starring the project to show your ❤️ and support.
 [![License](https://badgen.net/npm/license/git-delete-tag)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
+## Features
+
+- Support delete matched tags. e.g.`v1*`
+
+<p align="center">
+  <img src="https://unpkg.com/@evillt/media@latest/projects/git-delete-tag/main.svg">
+</p>
+
+## Prerequisites
+
+- git
+- node.js
+
+## Usage
+
+One-off usage via `npx`:
+
+```sh
+$ npx git-delete-tag [...tags]
+
+# Example
+$ npx git-delete-tag dev test-*
+```
+
+Using it globally:
+
+```sh
+$ npm i -g git-delete-tag
+
+# Or using yarn
+$ yarn global add git-delete-tag
+
+$ git-dt [...tags]
+$ git-delete-tag [...tags]
+
+# Or using git external commands
+$ git dt [...tags]
+$ git delete-tag [...tags]
+```
+
+## CLI
+
+`git-delete-tag [...tags] [options]`
+
+### `tags`
+
+Delete tags
+
+### `options`
+
+#### `-r, --remotes`
+
+Delete remotes tags
+
+#### `--scope <scope>`
+
+- Default: `origin`
+- When: `-r, --remotes`
+
+Branches scope name
+
+## Relates
+
+- [git-delete-branch](https://github.com/evillt/git-delete-branch)
+
 ## Contributing
 
 1. Fork it!
